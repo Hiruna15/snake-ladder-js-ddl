@@ -1,4 +1,3 @@
-//player class
 export class Player {
   constructor(name, color, image, id) {
     this.name = name;
@@ -10,8 +9,6 @@ export class Player {
   }
 }
 
-//clas SnakesladdersLink
-
 class SnakesladdersLink {
   constructor(square, endSquare) {
     this.square = square;
@@ -21,8 +18,6 @@ class SnakesladdersLink {
     this.players = [];
   }
 }
-
-//class board
 
 export class Board {
   constructor() {

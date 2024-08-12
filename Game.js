@@ -1,4 +1,3 @@
-// export { Game };
 import { diceData } from "./diceData.js";
 
 export class Game {
@@ -7,15 +6,12 @@ export class Game {
   position = 0;
   mode;
   level;
-  // answer;
 
   constructor(board) {
     this.board = board;
     this.currentPlayerNumber = 1;
     this.mainContainer = document.querySelector(".main-container");
   }
-
-  // startTheGame() {}
 
   createGameBoard() {
     const boardImg = document.querySelector(".board-img");
@@ -117,10 +113,18 @@ export class Game {
 
   createPlayers(players) {
     this.players = players;
-    // console.log(this.players);
   }
 
   handlePlayerMove() {
+    const playerAt100 = this.players.filter(
+      (player) => player.position === 100
+    );
+
+    if (playerAt100.length !== 0) {
+      this.resetPlayers();
+      alert("game restart");
+    }
+
     const player = this.players[this.currentPlayerNumber - 1];
 
     const randNum = Math.floor(Math.random() * (6 - 1 + 1)) + 1;
@@ -163,7 +167,6 @@ export class Game {
           `.playerDisc${this.currentPlayerNumber}`
         );
         playerDisc.classList.add("active");
-        this.resetPlayers();
         return;
       }
 
@@ -187,13 +190,6 @@ export class Game {
         this.currentPlayerNumber = this.currentPlayerNumber == 2 ? 1 : 2;
       }
 
-      // const currentPlayerNameEl = document.querySelector(
-      //   ".current-player-name"
-      // );
-      // currentPlayerNameEl.textContent = `${
-      //   this.players[this.currentPlayerNumber - 1].name
-      // }'s tern: `;
-
       const playersInGame = document.querySelectorAll(".player-in-game");
       playersInGame.forEach((currentPlayer) => {
         currentPlayer.classList.remove("current");
@@ -201,7 +197,6 @@ export class Game {
       playersInGame[this.currentPlayerNumber - 1].classList.add("current");
     }
 
-    ///compters tern
     if (this.players[this.currentPlayerNumber - 1].name === "computer") {
       const diceRollBtn = document.querySelector(".dice-roll-btn");
       diceRollBtn.disabled = true;
@@ -220,7 +215,6 @@ export class Game {
       if (newPosition === 100 || newPosition > 100) {
         player.position = 100;
         alert(`${player.name} won the game!!`);
-        // this.resetPlayers();
         return true;
       } else {
         player.position = newPosition;
@@ -230,7 +224,6 @@ export class Game {
       if (newPosition === 100) {
         player.position = 100;
         alert(`${player.name} won the game!!`);
-        // this.resetPlayers();
         return true;
       } else if (newPosition < 100) {
         player.position = newPosition;
@@ -240,7 +233,6 @@ export class Game {
       if (newPosition === 100) {
         player.position = 100;
         alert(`${player.name} won the game!!`);
-        // this.resetPlayers();
         return true;
       } else if (newPosition > 100) {
         const owerflow = newPosition - 100;
@@ -286,10 +278,6 @@ export class Game {
       player.rolledNumber = 0;
     });
     this.currentPlayerNumber = 1;
-    // const currentPlayerNameEl = document.querySelector(".current-player-name");
-    // currentPlayerNameEl.textContent = `${
-    //   this.players[this.currentPlayerNumber - 1].name
-    // }'s turn: `;
     const imgDice = document.querySelector(".dice-img");
     imgDice.src = diceData[1];
 

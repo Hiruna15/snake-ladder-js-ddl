@@ -1,4 +1,3 @@
-/* sasi  */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Bowlby+One+SC&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 * {
@@ -149,7 +148,6 @@ body {
   margin-left: 30px;
   height: 120px;
   width: 90%;
-  /* background-color: #353434; */
   position: relative;
   display: flex;
   gap: 40px;
@@ -238,7 +236,6 @@ input[type="radio"] {
   height: 25px;
   border-radius: 50%;
   border: 4px solid rgb(83, 83, 83);
-  /* background-color: #ffffff; */
   cursor: pointer;
 }
 
@@ -293,7 +290,6 @@ input[type="text"] {
 .user1 {
   position: relative;
   display: none;
-  /* width: fit-content; */
 }
 
 .user1.active {
@@ -375,7 +371,6 @@ input[type="text"] {
 
 .LEVEL_container h3 {
   margin-left: 150px;
-  /* margin-top: 10px; */
   position: relative;
   color: rgba(0, 0, 0, 0.871);
   font-family: "Bowlby One SC", sans-serif;
@@ -385,7 +380,6 @@ input[type="text"] {
 
 .LEVEL_container2 h3 {
   margin-left: 150px;
-  /* margin-top: 10px; */
   position: relative;
   color: rgba(0, 0, 0, 0.871);
   font-family: "Bowlby One SC", sans-serif;
@@ -395,7 +389,6 @@ input[type="text"] {
 
 .LEVEL_container3 h3 {
   margin-left: 150px;
-  /* margin-top: 10px; */
   position: relative;
   color: rgba(0, 0, 0, 0.871);
   font-family: "Bowlby One SC", sans-serif;
@@ -417,7 +410,6 @@ input[type="text"] {
 }
 
 .easy_mode_selected {
-  /* background-color: rgba(27, 121, 33, 0.648); */
   background-color: rgba(45, 255, 7, 0.667);
 }
 
@@ -443,17 +435,6 @@ input[type="text"] {
   border: none;
 }
 
-/* ////////////sasi end////////////// */
-
-/* .main-container {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10%;
-  background-color: black;
-} */
-
 .in-game-container {
   width: 100%;
   height: 100%;
@@ -461,9 +442,7 @@ input[type="text"] {
   align-items: center;
   justify-content: center;
   position: absolute;
-  /* background-color: red; */
   z-index: 20;
-  /* background-color: transparent; */
   display: none;
   gap: 200px;
 }
@@ -472,9 +451,7 @@ input[type="text"] {
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  /* z-index: 1; */
   z-index: 10;
-  /* display: none; */
 }
 
 .board-img {
@@ -482,9 +459,7 @@ input[type="text"] {
   width: 580px;
   height: 580px;
   position: absolute;
-  /* z-index: -1; */
   z-index: 12;
-  /* box-shadow: 0 0 15px 3px black; */
 }
 
 .board-border-image {
@@ -498,13 +473,7 @@ input[type="text"] {
   box-shadow: 0 0 20px 4px rgba(0, 0, 0, 0.882);
 }
 
-/* div[id="47"] {
-  background-color: black !important;
-  border: 2px solid yellow;
-} */
-
 .dice {
-  /* background-color: purple; */
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -542,7 +511,6 @@ input[type="text"] {
   position: relative;
   border: 1px solid rgb(255, 0, 0);
   z-index: 20;
-  /* box-shadow: 0 0 4px 1px rgb(73, 2, 214); */
 }
 
 .square .playerDisc1 {
@@ -616,14 +584,7 @@ input[type="text"] {
   top: 40%;
 }
 
-/* .dice_all_images_six img {
-  position: absolute;
-  z-index: 35;
-} */
-
 .dice-img {
-  /* position: absolute; */
-  /* z-index: 35; */
   width: 120px;
   height: 120px;
 }
@@ -632,7 +593,6 @@ input[type="text"] {
   position: absolute;
   z-index: 30;
   display: flex;
-  /* flex-direction: column; */
   gap: 20px;
   right: 8px;
   top: 10px;
@@ -662,7 +622,6 @@ input[type="text"] {
   cursor: pointer;
 }
 
-/* //////////////////////////////////////////////////////////////////////////////////////////////// */
 .player-container {
   display: flex;
   flex-direction: column;
@@ -674,21 +633,17 @@ input[type="text"] {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  /* background-color: red; */
 }
 
 .player-in-game {
   width: 220px;
   padding: 10px;
   position: relative;
-  /* border: 1px solid black; */
   display: flex;
   align-items: center;
   padding-left: 80px;
   height: 60px;
   filter: brightness(0.1);
-  /* box-shadow: 0 0 10px rgba(52, 52, 52, 0.7),
-  inset 0 0 10px rgba(44, 43, 43, 0.2); */
   box-shadow: 0 4px 10px -4px rgba(0, 0, 0, 0.4);
   border-radius: 10px;
 }
